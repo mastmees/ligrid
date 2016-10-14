@@ -1,0 +1,22 @@
+The amplifier has two identical channels, a dual opamp is used for each.
+The first stage of each channel is high-pass filter that gets rid of most
+low frequency noise, the second state is a simple amplifier stage. The
+stages are AC coupled using 100nF capacitor. Regular 5% tolerance parts
+will work fine.
+
+Power is supplied from single 0..12V AC wall-wart, followed by half-wave
+rectifier for positive and negative side. 78L09 and 79L09 regulators feed
+the opamps.
+
+Parallel capacitors are placed on antenna inputs, making the antenna
+resonate at around 10kHz. For the square winding with about 0.7
+meter side length on my antenna, 1uF capacitors were a good match
+for 12 loops of wire. Note that for timing based detection networks
+you should not use the capacitors as these will affect signal timing.
+
+I built mine on perfboard, wiring under the board with AWG30 wire-wrap
+wire in places where I could not connect the components directly. I used
+screw terminals for connections to input, output, and power. For antenna,
+I used a regular 1.5 square millimeters insulated electrical wire,
+and shielded audio cable to connect the amplifier to line input of a PC.
+ 
